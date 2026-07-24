@@ -195,8 +195,8 @@ jobs:
 
         # 提取系统设置参数（__ip__ 和 __hostname__ 前缀）
         RAW='${{ inputs.extra_packages }}'
-        CUSTOM_IP=$(echo "$RAW" | grep -oP '(?<=__ip__)[^,\s]+' || true)
-        CUSTOM_HOSTNAME=$(echo "$RAW" | grep -oP '(?<=__hostname__)[^,\s]+' || true)
+        CUSTOM_IP='192.168.20.1'
+        CUSTOM_HOSTNAME='Dongle'
 
         # 应用自定义 IP
         if [ -n "$CUSTOM_IP" ]; then
@@ -358,8 +358,8 @@ jobs:
         PROFILE=${{ github.event.inputs.profile }}
         # 提取用户设置的 IP 和主机名
         RAW='${{ inputs.extra_packages }}'
-        CUSTOM_IP=$(echo "$RAW" | grep -oP '(?<=__ip__)[^,\s]+' || true)
-        CUSTOM_HOSTNAME=$(echo "$RAW" | grep -oP '(?<=__hostname__)[^,\s]+' || true)
+        CUSTOM_IP='192.168.20.1'
+        CUSTOM_HOSTNAME='Dongle'
         DISPLAY_IP=${CUSTOM_IP:-192.168.1.1}
         DISPLAY_HOSTNAME=${CUSTOM_HOSTNAME:-ImmortalWrt}
         # 过滤掉特殊前缀，只显示真正的包名
