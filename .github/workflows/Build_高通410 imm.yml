@@ -185,7 +185,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: Install extra packages
-      if: ${{ inputs.extra_packages != '' }}
+      if: ${{ inputs.extra_packages != 'w' }}
       run: |
         cd openwrt
         echo "=========================================="
