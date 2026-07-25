@@ -355,7 +355,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        PROFILE=${{ github.event.inputs.profile }}
+        PROFILE='${{ github.event.inputs.profile }}'
         # 提取用户设置的 IP 和主机名
         RAW='${{ inputs.extra_packages }}'
         CUSTOM_IP='192.168.20.1'
