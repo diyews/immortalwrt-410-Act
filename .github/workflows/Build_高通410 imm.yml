@@ -155,7 +155,9 @@ jobs:
 
 
     - name:  files
-      run: cp -r files openwrt/files
+      run: |
+        cp -r files openwrt/files
+        cp -r overwrite/target/linux/msm89xx/dts/*  openwrt/target/linux/msm89xx/dts/
 
     - name: Load custom feeds
       run: |
