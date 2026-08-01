@@ -10,7 +10,7 @@
 	leds: leds {
 		led_r: led-r {
 			color = <LED_COLOR_ID_RED>;
-			default-state = "off";
+			default-state = "on";
 			function = LED_FUNCTION_POWER;
             linux,default-trigger = "heartbeat";
 		};
