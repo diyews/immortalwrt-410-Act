@@ -12,21 +12,21 @@
 			color = <LED_COLOR_ID_RED>;
 			default-state = "off";
 			function = LED_FUNCTION_POWER;
-      linux,default-trigger = "heartbeat";
+            linux,default-trigger = "heartbeat";
 		};
 
 		led_g: led-g {
 			color = <LED_COLOR_ID_GREEN>;
 			default-state = "off";
 			function = LED_FUNCTION_WLAN;
-      linux,default-trigger = "phy0tx";
+            // linux,default-trigger = "phy0tx";
 		};
 
 		led_b: led-b {
 			color = <LED_COLOR_ID_BLUE>;
 			default-state = "off";
 			function = LED_FUNCTION_WAN;
-      linux,default-trigger = "phy0tx";
+            linux,default-trigger = "phy0tx";
 		};
 
 		sim_sel {
